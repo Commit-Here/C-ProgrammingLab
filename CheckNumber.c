@@ -1,11 +1,11 @@
 // To check whether a given number is odd or even
 #include<stdio.h>
 
-void main()
+int main()
 {
     // integer data type to store integer input from user.
     int givenNum;
-    printf("Please Enter An Integer\n");
+    printf("Please Enter An Integer:\n");
     // Pre defined function in c to take input from user and storing it.
     scanf("%d", &givenNum);
 
