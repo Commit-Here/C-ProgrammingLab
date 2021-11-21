@@ -4,10 +4,20 @@
 // to check whether number is prime or not.
 int checkPrime(int num)
 {
-    if (num % 2 == 0)
+    int flag;
+    if (num == 1)
         return 1;
-    else 
-        return 0;
+    for (int i = 2; i < num; i++)
+    {
+        if (num % i == 0)
+        {    
+            flag = 1;
+            break;
+        }
+        else 
+            flag = 0;
+    } // for
+    return flag;
 } // checkPrime
 
 int main()
@@ -16,8 +26,8 @@ int main()
     printf("Please Enter An Integer:\n");
     scanf("%d", &givenNum);
 
-    if (checkPrime(givenNum))
-        printf("%d is a Even Number.\n", givenNum);
+    if (!checkPrime(givenNum))
+        printf("%d is a Prime Number.\n", givenNum);
     else 
-        printf("%d is a Odd Number.\n", givenNum);
+        printf("%d is not a Prime Number.\n", givenNum);
 } // main
