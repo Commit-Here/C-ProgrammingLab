@@ -1,23 +1,17 @@
 // To display characters of a string using pointers.
 #include<stdio.h>
 
-void printString(char pointerOfC[], int len)
-{
-    puts(pointerOfC);
-} // printString
-
 int main()
 {
-    char c[80];
-    int i = 0, count = 1;
-    printf("Enter the string:\n\t");
-    
-    // can also use gets(c) rather than this loop.
-    while ((c[i] = getchar()) != '\n')
-    {
-        count++;
-        i++;
-    } // while
+    // here *ptc is pointer to char and can store address of 
+    // only char it store address of first element.
+    char c[80], *pointerToChar;
+    printf("Enter the string:\n");
+    scanf("%[^\n]", c);
+    pointerToChar = c;
 
-    printString(c, count);
+    printf("The String is ");
+    while (*pointerToChar != '\0')
+        printf("%c", *pointerToChar++);
+    printf("\n");
 } // main
