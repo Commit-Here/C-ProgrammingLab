@@ -3,7 +3,6 @@
 
 void printString(char pointerOfC[], int len)
 {
-    
     puts(pointerOfC);
 } // printString
 
